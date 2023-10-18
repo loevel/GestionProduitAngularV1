@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-light" >
+  <ul class="navbar navbar-nav">
+    <li><button (click)="onGetListProduit()" class="btn btn-outline-info ml-2" >Tout</button></li>
+    <li><button (click)="onGetSelectProduit()" class="btn btn-outline-info ml-2" >Selectioné(s)</button></li>
+    <li><button (click)="onGetDispoProduit()" class="btn btn-outline-info ml-2" >Disponible(s)</button></li>
+    <li><button (click)="onAddProduit()" class="btn btn-outline-info ml-2" >Nouveau Produit</button></li>
+  </ul>
+  <ul class="navbar navbar-nav m-lg-auto" >
+    <form ngForm="rechercche" #f ="ngForm" (ngSubmit)=" onRechProduit(f.value)" class="d-flex">
+      <input ngModel name="key" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </ul>
+
+
+</nav>

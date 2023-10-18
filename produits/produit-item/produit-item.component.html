@@ -1,0 +1,22 @@
+<tr *ngIf="po">
+  <td>{{po.id}}</td>
+  <td>{{po.name | uppercase}}</td>
+  <td>{{po.prix | currency }}</td>
+  <td>{{po.quantite | number}}</td>
+  <td>{{po.selectionner }}</td>
+  <td>{{po.disponible}}</td>
+  <td>
+    <button  class="btn btn-danger  ml-2" (click)="onSupprime(po)" >Supprimer</button>
+    <button  class="btn btn-secondary  ml-2" (click)="onModifie(po)" >Modifier</button>
+  </td>
+
+  <td>
+
+    <button    [ngClass]="po.selectionner?'btn-success':'btn-danger'"  class="btn btn-sm"    >
+      <span *ngIf="po.selectionner"  (click)="onSelect(po)"  >Deselectionner </span>
+      <span *ngIf="!po.selectionner" (click)="onSelect(po)"   >Selectionner</span>
+    </button>
+
+  </td>
+
+</tr>

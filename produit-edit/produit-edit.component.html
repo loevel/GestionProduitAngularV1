@@ -1,0 +1,33 @@
+<div class="container" *ngIf="po">
+
+  <form [formGroup]="po">
+    <div class="form-group">
+      <label>ID</label>
+      <input formControlName="id" type="text" class="form-control"
+      >
+    </div>
+    <div class="form-group">
+      <label>Nom </label>
+      <input formControlName="name" type="text" class="form-control"
+      >
+    </div>
+    <div class="form-group">
+      <label>Prix</label>
+      <input formControlName="prix" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Quantite</label>
+      <input  formControlName="quantite" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label>Selectionné</label>
+      <input   formControlName="selectionne" type="checkbox" >
+    </div>
+    <div class="form-group">
+      <label>Disponible</label>
+      <input  formControlName="disponible" type="checkbox"  >
+    </div>
+    <button class="btn btn-primary"  (click)="onModifie()">Enregistrer</button>
+  </form>
+
+</div>
